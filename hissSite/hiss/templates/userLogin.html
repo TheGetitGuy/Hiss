@@ -1,0 +1,11 @@
+
+<h1> Login </h1>
+<div id="loginHolder">
+<form method="post" action="/hiss/userLoggedIn/">
+    <!--I guess this is a safety thing with the post method?-->
+    {% csrf_token %}
+    <input name="userName" id='userName' type="text" placeholder="user"></input>
+    <input name="password" id='password' type="text"placeholder='password'></input>
+    <button type="submit">Submit</button>
+</form>
+</div>
