@@ -1,7 +1,9 @@
+{% load static %}
 
+<link rel="stylesheet" href="{% static 'userLogin.css' %}">
 <h1> Login </h1>
 <div id="loginHolder">
-<form method="post" action="/hiss/userLoggedIn/">
+<form method="post" action="/userLoggedIn/">
     <!--I guess this is a safety thing with the post method?-->
     {% csrf_token %}
     <input name="userName" id='userName' type="text" placeholder="user"></input>
