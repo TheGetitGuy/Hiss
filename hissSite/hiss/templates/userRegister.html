@@ -1,8 +1,9 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'userLogin.css' %}">
-<h1> Login </h1>
-<p> Not registered? Click <a href="{% url 'register' %}">here</a></p>
+<h1> Register your Account. </h1>
+<p> Already registered? Click <a href="{% url 'login' %}">here</a></p>
+
 <div id="loginHolder">
 <form method="post" action="/userLoggedIn/">
     <!--I guess this is a safety thing with the post method?-->
