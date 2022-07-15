@@ -9,5 +9,5 @@ urlpatterns = [
     path('login/', views.login, name ='login'),
     path('register/', views.register, name ='register'),
     path('logout/', views.register, name ='logout'),
-    path(' ', RedirectView.as_view(url='login/'),),
+    path('', RedirectView.as_view(url='login/'),),
 ]
