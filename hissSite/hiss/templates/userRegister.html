@@ -1,15 +1,19 @@
 {% load static %}
-
+<!--Alert Messages-->
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
 <link rel="stylesheet" href="{% static 'userLogin.css' %}">
 <h1> Register your Account. </h1>
 <p> Already registered? Click <a href="{% url 'login' %}">here</a></p>
 
 <div id="loginHolder">
-<form method="post" action="/userLoggedIn/">
+<form method="POST" action="{% url 'register' %}">
     <!--I guess this is a safety thing with the post method?-->
     {% csrf_token %}
-    <input name="userName" id='userName' type="text" placeholder="user"></input>
+    <input name="username" id='username' type="text" placeholder="username"></input>
     <input name="password" id='password' type="text"placeholder='password'></input>
+    <input name="password2" id='password2' type="text"placeholder='password again'></input>
     <button type="submit">Submit</button>
 </form>
 </div>
